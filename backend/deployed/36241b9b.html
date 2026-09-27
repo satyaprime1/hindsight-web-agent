@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satya Grand Hotel | Hotel in Hyderabad</title>
+    <meta name="description" content="Top-rated Hotel in Hyderabad. Call +1 (512) 555-0198 or chat on WhatsApp for fast booking.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-slate-900 text-white text-xs py-2 px-4 text-center font-medium flex items-center justify-center space-x-3">
+        <span>📍 Proudly serving Hyderabad & surrounding neighborhoods</span>
+        <span class="hidden md:inline">•</span>
+        <span class="hidden md:inline">🕒 Instant Confirmation on WhatsApp</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all duration-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center font-extrabold text-xl shadow-md shadow-amber-600/20">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-slate-900">Satya Grand Hotel</span>
+                    <span class="block text-xs font-medium text-slate-500">Hotel</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600">
+                <a href="#services" class="hover:text-amber-600 transition-colors">Services</a>
+                <a href="#why-us" class="hover:text-amber-600 transition-colors">Why Us</a>
+                <a href="#testimonials" class="hover:text-amber-600 transition-colors">Reviews</a>
+                <a href="#contact" class="hover:text-amber-600 transition-colors">Location</a>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="hidden sm:flex items-center space-x-3">
+                <a href="tel:+1(512)555-0198" class="flex items-center space-x-2 text-sm font-semibold text-slate-700 hover:text-amber-600 px-3 py-2 rounded-lg transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-amber-600"></i>
+                    <span>+1 (512) 555-0198</span>
+                </a>
+                <button onclick="openBookingModal()" class="bg-amber-600 hover:bg-amber-700 text-white px-5 py-2.5 rounded-xl font-semibold text-sm shadow-md shadow-amber-600/20 hover:shadow-lg transition-all duration-200 flex items-center space-x-2">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Book a Room</span>
+                </button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button onclick="toggleMobileMenu()" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-white border-b border-slate-200 space-y-3">
+            <a href="#services" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Services</a>
+            <a href="#why-us" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Why Us</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Reviews</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Contact</a>
+            <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full bg-amber-600 text-white py-3 rounded-xl font-semibold shadow-md">
+                Book a Room
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-white via-amber-50/30 to-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-amber-100 text-amber-900 text-xs font-bold tracking-wide uppercase">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-amber-700"></i>
+                        <span>Verified & Premier Experience in Hyderabad</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Hyderabad's Premier Luxury Stay & Hospitality
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Experience world-class comfort and elegance at Satya Grand Hotel in Hyderabad. Modern suites, fine dining, and personalized hospitality.
+                    </p>
+
+                    <!-- Trust Stats -->
+                    <div class="pt-2 flex flex-wrap justify-center lg:justify-start gap-4 text-xs font-semibold text-slate-500">
+                        <div class="flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="star" class="w-4 h-4 text-amber-500 fill-amber-500"></i>
+                            <span>4.9/5 Rating (500+ Reviews)</span>
+                        </div>
+                        <div class="flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i data-lucide="clock" class="w-4 h-4 text-emerald-600"></i>
+                            <span>Instant WhatsApp Support</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero CTAs -->
+                    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button onclick="openBookingModal()" class="w-full sm:w-auto bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-amber-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="calendar" class="w-5 h-5"></i>
+                            <span>Book a Room</span>
+                        </button>
+                        <button onclick="openLiveChat()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-bold text-base shadow-lg shadow-emerald-600/30 hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            <span>Instant WhatsApp Chat</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Card / Quick Booking Preview -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-xl shadow-slate-200/50 relative">
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-100">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-900">Reserve Your Suite</h3>
+                                <p class="text-xs text-slate-500">Instant booking confirmation with zero prepayment</p>
+                            </div>
+                            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+                                ● Online
+                            </span>
+                        </div>
+
+                        <form id="hero-quick-form" onsubmit="handleHeroSubmit(event)" class="space-y-4 pt-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name</label>
+                                <input type="text" required placeholder="Guest Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp Number</label>
+                                <input type="tel" required placeholder="+1 (512) 555-0198" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 mb-1">Select Option</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm bg-white">
+                                    
+                <option>Executive Deluxe Suite</option>
+                <option>Presidential Luxury Room</option>
+                <option>Standard Business Double</option>
+                <option>Banquet & Conference Hall</option>
+            
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl shadow-md transition-all text-sm flex items-center justify-center space-x-2">
+                                <span>Confirm Book a Room</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold text-amber-700 uppercase tracking-widest mb-2">Tailored Offerings</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">World-Class Services & Comfort</h3>
+                <p class="text-slate-600 mt-4 text-base">Delivering excellence and comfort in Hyderabad.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Executive & Deluxe Suites</h3>
+                <p class="text-slate-600 leading-relaxed">Spacious, climate-controlled suites designed for business travelers and vacationers in Hyderabad.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">24/7 Room Service & Dining</h3>
+                <p class="text-slate-600 leading-relaxed">Gourmet multi-cuisine breakfast, lunch, and dinner delivered fresh to your suite.</p>
+            </div>
+            
+            <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 group">
+                <div class="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center text-amber-700 mb-6 group-hover:scale-110 transition-transform">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-2">Banquets & Conference Halls</h3>
+                <p class="text-slate-600 leading-relaxed">High-tech audio/visual conference facilities and banquet hosting for up to 300 guests.</p>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-white border-y border-slate-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs font-bold text-emerald-600 uppercase tracking-widest">Why We Stand Out</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Built on Trust, Elegance, and Exceptional Customer Care.
+                    </h2>
+                    <p class="text-slate-600 leading-relaxed text-base">
+                        When you choose Satya Grand Hotel, you experience verified quality, transparent pricing, and unforgettable service.
+                    </p>
+                    <ul class="space-y-4 pt-2">
+                        
+            <li class="flex items-start space-x-3">
+                <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span class="text-slate-700 font-medium">Consistently rated #1 for hotel in Hyderabad</span>
+            </li>
+            
+            <li class="flex items-start space-x-3">
+                <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span class="text-slate-700 font-medium">Transparent upfront pricing with zero hidden fees</span>
+            </li>
+            
+            <li class="flex items-start space-x-3">
+                <div class="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center">
+                    <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                </div>
+                <span class="text-slate-700 font-medium">Dedicated customer care team available on WhatsApp and phone</span>
+            </li>
+            
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-tr from-amber-700 to-amber-900 rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+                    <div class="relative z-10 space-y-6">
+                        <div class="inline-block p-3 rounded-2xl bg-white/20 backdrop-blur-md">
+                            <i data-lucide="award" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-bold">100% Satisfaction Guarantee</h3>
+                        <p class="text-white/90 text-sm leading-relaxed">
+                            Every experience at Satya Grand Hotel is backed by our full service guarantee. If anything does not meet your expectations, we will make it right immediately.
+                        </p>
+                        <div class="pt-4 flex items-center space-x-4">
+                            <button onclick="openBookingModal()" class="bg-white text-slate-900 font-bold px-6 py-3 rounded-xl shadow-lg hover:bg-slate-100 transition-colors text-sm">
+                                Book a Room
+                            </button>
+                            <button onclick="openLiveChat()" class="text-white font-semibold flex items-center space-x-2 text-sm hover:underline">
+                                <span>Direct Chat</span>
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-amber-700 uppercase tracking-widest">Real Customer Feedback</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-2">Loved by Locals in Hyderabad</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm">
+                <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-700 italic mb-4">"The hospitality and attention to detail at Satya Grand Hotel in Hyderabad was extraordinary!"</p>
+                <div class="font-semibold text-slate-900 text-sm">Priya Sharma</div>
+                <div class="text-xs text-slate-500">Verified Client • Hyderabad</div>
+            </div>
+            
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/60 shadow-sm">
+                <div class="flex items-center space-x-1 text-amber-400 mb-4">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <p class="text-slate-700 italic mb-4">"Remarkable service, quick response, and very courteous team. Will definitely visit again."</p>
+                <div class="font-semibold text-slate-900 text-sm">Rajesh Kumar</div>
+                <div class="text-xs text-slate-500">Verified Client • Hyderabad</div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <span class="text-xs font-bold text-amber-700 uppercase tracking-widest">Visit & Connect</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">We're Here in Hyderabad</h2>
+                    <p class="text-slate-600 text-base">Have questions or need assistance? Our on-duty concierge and support staff are available 24/7.</p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-semibold uppercase">Location Address</div>
+                                <div class="font-bold text-slate-900">Hyderabad Prime District</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="phone-call" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-slate-500 font-semibold uppercase">Telephone Desk</div>
+                                <a href="tel:+1(512)555-0198" class="font-bold text-slate-900 hover:text-amber-700">+1 (512) 555-0198</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 cursor-pointer" onclick="openLiveChat()">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <div class="text-xs text-emerald-800 font-semibold uppercase">Official WhatsApp Desk</div>
+                                <div class="font-bold text-emerald-900 hover:underline">Click to start live chat & WhatsApp</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Location / Map Card -->
+                <div class="rounded-3xl bg-slate-100 p-8 border border-slate-200 flex flex-col justify-between relative overflow-hidden">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center space-x-2 bg-white px-3 py-1 rounded-full text-xs font-bold text-slate-700 shadow-sm">
+                            <i data-lucide="navigation" class="w-3.5 h-3.5 text-amber-700"></i>
+                            <span>Territory: Hyderabad</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Direct Service & Reception Hub</h3>
+                        <p class="text-slate-600 text-sm">Centrally situated in Hyderabad with convenient transit and valet parking.</p>
+                    </div>
+
+                    <div class="my-8 h-48 bg-slate-200 rounded-2xl flex items-center justify-center border border-slate-300/80 relative">
+                        <div class="text-center space-y-2">
+                            <div class="w-12 h-12 rounded-full bg-amber-600 text-white flex items-center justify-center mx-auto shadow-lg animate-bounce">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <span class="text-xs font-bold text-slate-700 block">Satya Grand Hotel • Hyderabad</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openBookingModal()" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 rounded-xl shadow-md transition-all text-sm">
+                        Book a Room
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i>
+                </div>
+                <span class="text-white font-bold text-base">Satya Grand Hotel</span>
+            </div>
+            <div>
+                © 2026 Satya Grand Hotel. All rights reserved. Premium Hotel in Hyderabad.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Live Chat / WhatsApp Button -->
+    <button onclick="openLiveChat()" class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-600 text-white p-4 rounded-full shadow-2xl shadow-emerald-500/40 hover:scale-110 transition-all duration-300 flex items-center justify-center group" title="Instant Chat / WhatsApp">
+        <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-bold pl-0 group-hover:pl-2">
+            Live Chat
+        </span>
+    </button>
+
+    <!-- Interactive Live Chat Desk Drawer / Modal -->
+    <div id="live-chat-modal" class="fixed inset-0 sm:inset-auto sm:bottom-24 sm:right-6 z-50 hidden sm:w-96 bg-white sm:rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col h-full sm:h-[480px]">
+        <!-- Chat Header -->
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-700 text-white p-4 flex items-center justify-between flex-shrink-0">
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center font-bold text-sm">
+                        <i data-lucide="user-check" class="w-5 h-5"></i>
+                    </div>
+                    <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-300 border-2 border-emerald-700 rounded-full"></span>
+                </div>
+                <div>
+                    <h4 class="font-bold text-sm leading-tight">Satya Grand Hotel Live Desk</h4>
+                    <span class="text-[11px] text-emerald-100 flex items-center space-x-1">
+                        <span>● Replies instantly</span>
+                    </span>
+                </div>
+            </div>
+            <button onclick="closeLiveChat()" class="text-white/80 hover:text-white p-1 rounded-lg">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+        </div>
+
+        <!-- Chat Conversation Area -->
+        <div id="chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-50 text-xs">
+            <!-- Agent Welcome Bubble -->
+            <div class="flex items-start space-x-2">
+                <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                </div>
+                <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-slate-200 shadow-sm max-w-[85%] text-slate-800 leading-relaxed">
+                    Hello! Welcome to <strong>Satya Grand Hotel</strong> in Hyderabad. How can our team assist you today?
+                </div>
+            </div>
+
+            <!-- Quick Action Suggestion Chips -->
+            <div class="pt-2 flex flex-wrap gap-1.5 pl-8">
+                <button onclick="sendQuickMessage('I would like to book a room')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full text-[11px] font-medium transition">
+                    🛎️ Book a Room
+                </button>
+                <button onclick="sendQuickMessage('What are your room rates and availability?')" class="bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 px-2.5 py-1 rounded-full text-[11px] font-medium transition">
+                    💰 Pricing & Rates
+                </button>
+                <button onclick="openWhatsAppDirect()" class="bg-emerald-600 text-white px-2.5 py-1 rounded-full text-[11px] font-semibold transition flex items-center space-x-1">
+                    <i data-lucide="message-circle" class="w-3 h-3"></i>
+                    <span>Open in WhatsApp</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat Input Bar -->
+        <div class="p-3 bg-white border-t border-slate-200 flex items-center space-x-2 flex-shrink-0">
+            <input type="text" id="chat-input" onkeydown="if(event.key==='Enter') sendChatMessage()" placeholder="Type a message..." class="flex-1 px-3 py-2 text-xs border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-emerald-500">
+            <button onclick="sendChatMessage()" class="w-8 h-8 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center flex-shrink-0 transition">
+                <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-950/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl relative border border-slate-100">
+            <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-700 p-1.5 rounded-lg">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+
+            <div class="mb-6">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900">Book a Room</h3>
+                <p class="text-slate-500 text-sm mt-1">Direct reservation with Satya Grand Hotel. Confirmed within 15 minutes.</p>
+            </div>
+
+            <form id="modal-form" onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Full Name</label>
+                    <input type="text" required placeholder="Guest Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Phone / WhatsApp</label>
+                        <input type="tel" required placeholder="+1 (512) 555-0198" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Check-in / Check-out Dates</label>
+                        <input type="date" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Selection</label>
+                    <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none text-sm bg-white">
+                        
+                <option>Executive Deluxe Suite</option>
+                <option>Presidential Luxury Room</option>
+                <option>Standard Business Double</option>
+                <option>Banquet & Conference Hall</option>
+            
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-amber-600/20 transition-all text-sm flex items-center justify-center space-x-2">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                    <span>Confirm Book a Room</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Client-Side Toast Notification -->
+    <div id="toast" class="fixed top-6 right-6 z-50 hidden bg-emerald-600 text-white px-6 py-4 rounded-2xl shadow-xl font-medium flex items-center space-x-3">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+        <span id="toast-message">Booking received! We will text you shortly.</span>
+    </div>
+
+    <script>
+        const waLink = "https://wa.me/15125550198";
+
+        lucide.createIcons();
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function openBookingModal() {
+            document.getElementById('booking-modal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('booking-modal').classList.add('hidden');
+        }
+
+        function openLiveChat() {
+            document.getElementById('live-chat-modal').classList.remove('hidden');
+            setTimeout(() => {
+                document.getElementById('chat-input').focus();
+            }, 100);
+        }
+
+        function closeLiveChat() {
+            document.getElementById('live-chat-modal').classList.add('hidden');
+        }
+
+        function openWhatsAppDirect() {
+            window.open(waLink, '_blank');
+        }
+
+        function sendQuickMessage(text) {
+            appendUserMessage(text);
+            setTimeout(() => {
+                appendAgentReply("Thank you! Our concierge has received your request: '" + text + "'. We can also continue instantly on WhatsApp.");
+            }, 600);
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            appendUserMessage(text);
+            input.value = "";
+            setTimeout(() => {
+                appendAgentReply("Got it! Our staff is ready to help with '" + text + "'. Would you like to confirm on WhatsApp now? <br><button onclick='openWhatsAppDirect()' class='mt-2 bg-emerald-600 text-white px-3 py-1 rounded-lg font-bold flex items-center space-x-1.5'><span>Chat on WhatsApp</span></button>");
+            }, 700);
+        }
+
+        function appendUserMessage(text) {
+            const container = document.getElementById('chat-messages');
+            const div = document.createElement('div');
+            div.className = "flex justify-end";
+            div.innerHTML = `<div class="bg-emerald-600 text-white p-3 rounded-2xl rounded-tr-none shadow-sm max-w-[85%] leading-relaxed">${text}</div>`;
+            container.appendChild(div);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function appendAgentReply(html) {
+            const container = document.getElementById('chat-messages');
+            const div = document.createElement('div');
+            div.className = "flex items-start space-x-2";
+            div.innerHTML = `
+                <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                </div>
+                <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-slate-200 shadow-sm max-w-[85%] text-slate-800 leading-relaxed">${html}</div>
+            `;
+            container.appendChild(div);
+            lucide.createIcons();
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').innerText = message;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 4000);
+        }
+
+        function handleModalSubmit(e) {
+            e.preventDefault();
+            closeBookingModal();
+            showToast("Success! Your booking request has been confirmed.");
+        }
+
+        function handleHeroSubmit(e) {
+            e.preventDefault();
+            showToast("Confirmed! Our team will contact you on WhatsApp / SMS.");
+        }
+    </script>
+</body>
+</html>

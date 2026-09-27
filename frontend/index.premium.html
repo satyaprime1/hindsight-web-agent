@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceCraft — Adaptive Web Engineering</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        .mic-pulsing {
+            animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        #app-toast {
+            position: fixed; right: 20px; bottom: 20px; z-index: 100;
+            max-width: 380px; transition: opacity .2s, transform .2s;
+        }
+        .toast-hidden { opacity: 0; transform: translateY(10px); pointer-events: none; }
+        @media (max-width: 1180px) {
+            body { height: auto; min-height: 100vh; overflow: auto; }
+            body > div.flex-1 { flex-direction: column; overflow: visible; }
+            body > div.flex-1 > aside, body > div.flex-1 > main { width: 100% !important; max-width: none; flex-shrink: 0; }
+            body > div.flex-1 > aside { max-height: none; border-right: 0; border-left: 0; border-bottom: 1px solid #1e293b; }
+            body > div.flex-1 > main { min-height: 70vh; }
+            #preview-wrapper { min-height: 620px; }
+        }
+        @media (max-width: 640px) {
+            header { padding-left: 12px !important; padding-right: 12px !important; }
+            header .flex.items-center.space-x-4 { display: none; }
+            body > div.flex-1 > aside { padding: 12px !important; }
+            #preview-wrapper { min-height: 520px; border-radius: 12px; }
+            main > div:first-child { padding-left: 12px !important; padding-right: 12px !important; overflow-x: auto; }
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+
+        :root {
+            --bg: #070707;
+            --panel: #0d0d0d;
+            --panel-2: #111111;
+            --line: rgba(255,255,255,.08);
+            --line-strong: rgba(255,255,255,.14);
+            --text: #f5f5f2;
+            --muted: #8b8b86;
+            --gold: #d6b56d;
+            --gold-bright: #f1d58b;
+            --green: #7dd3a7;
+        }
+        body {
+            background: radial-gradient(circle at 50% -20%, rgba(214,181,109,.08), transparent 34%), #070707 !important;
+            color: var(--text) !important;
+        }
+        body::before {
+            content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
+            background-image: linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+            background-size: 44px 44px; mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+        header, aside, main, #deploy-modal, #app-toast { position:relative; z-index:1; }
+        header { background:rgba(9,9,9,.88) !important; border-color:var(--line) !important; backdrop-filter:blur(18px); }
+        header .w-8.h-8 { background:linear-gradient(135deg,#f2d58f,#8f6b31) !important; box-shadow:0 0 30px rgba(214,181,109,.16) !important; }
+        header .text-sky-400 { color:var(--gold-bright) !important; }
+        header .bg-sky-500\/20 { background:rgba(214,181,109,.09) !important; border-color:rgba(214,181,109,.22) !important; }
+        body > div.flex-1 > aside { background:rgba(12,12,12,.92) !important; border-color:var(--line) !important; backdrop-filter:blur(16px); }
+        main { background:#090909 !important; }
+        main > div:first-child { background:rgba(13,13,13,.86) !important; border-color:var(--line) !important; backdrop-filter:blur(14px); }
+        .bg-slate-950 { background:#080808 !important; }
+        .bg-slate-900, .bg-slate-900\/90, .bg-slate-900\/60 { background:rgba(15,15,15,.92) !important; }
+        .bg-slate-800 { background:#151515 !important; }
+        .border-slate-800, .border-slate-700 { border-color:var(--line) !important; }
+        .text-slate-100,.text-white { color:#f5f5f2 !important; }
+        .text-slate-300 { color:#c9c9c3 !important; }
+        .text-slate-400 { color:#999992 !important; }
+        .text-slate-500 { color:#70706b !important; }
+        .text-sky-400 { color:var(--gold-bright) !important; }
+        .text-emerald-400 { color:var(--green) !important; }
+        input, textarea, select { background:#090909 !important; border-color:var(--line-strong) !important; transition:.22s ease; }
+        input:focus, textarea:focus, select:focus { border-color:rgba(241,213,139,.55) !important; box-shadow:0 0 0 3px rgba(214,181,109,.07), 0 0 22px rgba(214,181,109,.05); }
+        button { transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease, color .22s ease !important; }
+        button:hover { transform:translateY(-1px); }
+        #btn-generate { background:linear-gradient(135deg,#f0d18a,#a47a35) !important; color:#0a0a0a !important; border:1px solid rgba(255,226,157,.5); box-shadow:0 12px 30px rgba(214,181,109,.13), inset 0 1px rgba(255,255,255,.35) !important; position:relative; overflow:hidden; }
+        #btn-generate::after { content:""; position:absolute; inset:-100% 30%; background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent); transform:rotate(18deg); transition:transform .8s ease; }
+        #btn-generate:hover::after { transform:translateX(230%) rotate(18deg); }
+        #btn-generate:hover { box-shadow:0 18px 40px rgba(214,181,109,.22), inset 0 1px rgba(255,255,255,.45) !important; }
+        #btn-voice-submit { background:#151515 !important; color:var(--gold-bright) !important; border:1px solid rgba(214,181,109,.24); }
+        #btn-voice-submit:hover { background:#1c1c1c !important; border-color:rgba(214,181,109,.5); box-shadow:0 10px 25px rgba(214,181,109,.08); }
+        #btn-mic { background:#111 !important; border-color:var(--line-strong) !important; }
+        #btn-mic:hover { border-color:rgba(214,181,109,.5) !important; box-shadow:0 0 24px rgba(214,181,109,.1); }
+        #preview-wrapper { border-color:rgba(214,181,109,.18) !important; box-shadow:0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.03) !important; }
+        #preview-wrapper::before { content:"LIVE PREVIEW"; position:absolute; z-index:3; top:10px; left:12px; padding:4px 8px; font:700 9px/1 'JetBrains Mono',monospace; letter-spacing:.12em; color:#17130b; background:rgba(241,213,139,.9); border-radius:999px; box-shadow:0 4px 15px rgba(0,0,0,.2); }
+        #preview-wrapper { position:relative; }
+        .memory-stage { position:relative; overflow:hidden; border:1px solid rgba(214,181,109,.15); background:linear-gradient(145deg,rgba(214,181,109,.06),rgba(255,255,255,.015)); border-radius:18px; padding:14px; }
+        .memory-stage::after { content:""; position:absolute; width:100px; height:100px; right:-35px; top:-35px; border-radius:50%; background:rgba(214,181,109,.08); filter:blur(20px); }
+        .stage-node { position:relative; display:flex; align-items:center; gap:9px; }
+        .stage-dot { width:8px; height:8px; border-radius:50%; background:#4b4b46; box-shadow:0 0 0 4px rgba(255,255,255,.025); transition:.3s; }
+        .stage-node.active .stage-dot { background:var(--gold-bright); box-shadow:0 0 0 4px rgba(214,181,109,.09), 0 0 18px rgba(214,181,109,.35); }
+        .stage-node.done .stage-dot { background:var(--green); }
+        .stage-line { height:1px; background:var(--line); flex:1; }
+        .learning-pulse { animation:learningPulse 2.2s ease-in-out infinite; }
+        @keyframes learningPulse { 0%,100%{box-shadow:0 0 0 0 rgba(214,181,109,.0)} 50%{box-shadow:0 0 0 6px rgba(214,181,109,.06)} }
+        .memory-card { transition:.25s ease; }
+        .memory-card:hover { transform:translateX(-2px); border-color:rgba(214,181,109,.28) !important; background:#10100f !important; }
+        .gold-rule { height:1px; background:linear-gradient(90deg,transparent,rgba(214,181,109,.45),transparent); }
+        .status-pill { border-color:rgba(214,181,109,.16) !important; background:rgba(214,181,109,.05) !important; }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 h-screen flex flex-col overflow-hidden">
+
+    <!-- Top App Navigation Bar -->
+    <header class="h-14 bg-slate-900 border-b border-slate-800 px-6 flex items-center justify-between flex-shrink-0 z-30">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-sky-500/20">
+                <i data-lucide="brain-circuit" class="w-5 h-5"></i>
+            </div>
+            <div>
+                <span class="font-extrabold text-base tracking-tight text-white flex items-center space-x-2">
+                    <span>Hexo Elite AI</span>
+                    <span class="text-xs px-2 py-0.5 rounded-full bg-sky-500/20 text-sky-400 font-semibold border border-sky-500/30">Hindsight Memory</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- System Status Badges -->
+        <div class="flex items-center space-x-4 text-xs font-semibold">
+            <div class="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Hindsight Bank: <strong class="text-white" id="status-bank">local-biz-architect</strong></span>
+            </div>
+            <div class="flex items-center space-x-1.5 px-3 py-1 rounded-full bg-slate-800 text-slate-300 border border-slate-700">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
+                <span>4-Critic Self-Healing: <strong class="text-white">Active</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <div class="flex-1 flex overflow-hidden">
+
+        <!-- LEFT PANEL: Business Intake & Company Asset Vault -->
+        <aside class="w-80 lg:w-[420px] bg-slate-900/90 border-r border-slate-800 flex flex-col justify-between p-4 overflow-y-auto flex-shrink-0 space-y-4">
+            
+            <div class="space-y-4">
+                <!-- Section Header -->
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
+                            <i data-lucide="folder-kanban" class="w-4 h-4 text-sky-400"></i>
+                            <span>Company Assets & Vault</span>
+                        </h2>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Brand assets, photos, rates & PDFs.</p>
+                    </div>
+                </div>
+
+                <!-- Presets Quick Select -->
+                <div class="flex flex-wrap gap-1.5">
+                    <button onclick="applyPreset('hotel')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+                        🏨 Hyderabad Hotel
+                    </button>
+                    <button onclick="applyPreset('dental')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+                        🦷 Austin Dental
+                    </button>
+                    <button onclick="applyPreset('cafe')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+                        ☕ Bangalore Cafe
+                    </button>
+                </div>
+
+                <!-- Tab Navigation Buttons -->
+                <div class="flex border-b border-slate-800 text-xs font-semibold">
+                    <button onclick="switchAssetTab('profile')" id="tab-btn-profile" class="flex-1 pb-2 border-b-2 border-sky-500 text-sky-400 flex items-center justify-center space-x-1">
+                        <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                        <span>Profile</span>
+                    </button>
+                    <button onclick="switchAssetTab('brand')" id="tab-btn-brand" class="flex-1 pb-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center justify-center space-x-1">
+                        <i data-lucide="image" class="w-3.5 h-3.5"></i>
+                        <span>Logo</span>
+                    </button>
+                    <button onclick="switchAssetTab('media')" id="tab-btn-media" class="flex-1 pb-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center justify-center space-x-1">
+                        <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                        <span>Media</span>
+                    </button>
+                    <button onclick="switchAssetTab('pricing')" id="tab-btn-pricing" class="flex-1 pb-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center justify-center space-x-1">
+                        <i data-lucide="tag" class="w-3.5 h-3.5"></i>
+                        <span>Pricing</span>
+                    </button>
+                    <button onclick="switchAssetTab('brochure')" id="tab-btn-brochure" class="flex-1 pb-2 border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center justify-center space-x-1">
+                        <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+                        <span>PDF</span>
+                    </button>
+                </div>
+
+                <!-- TAB 1: Profile & Contact -->
+                <div id="tab-pane-profile" class="space-y-3 text-xs">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Business Name</label>
+                        <input type="text" id="biz-name" required value="Satya Grand Hotel" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="block font-semibold text-slate-300 mb-1">Category</label>
+                            <input type="text" id="biz-category" required value="Hotel" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-300 mb-1">Location</label>
+                            <input type="text" id="biz-location" required value="Hyderabad" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-2.5">
+                        <div>
+                            <label class="block font-semibold text-slate-300 mb-1">Telephone</label>
+                            <input type="text" id="biz-phone" required value="7337537599" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                        </div>
+                        <div>
+                            <label class="block font-semibold text-slate-300 mb-1">WhatsApp (Intl)</label>
+                            <input type="text" id="biz-whatsapp" required value="917337537599" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Services / Highlights</label>
+                        <input type="text" id="biz-services" value="Deluxe Executive Suites, Fine Dining, Banquet Facilities" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                </div>
+
+                <!-- TAB 2: Brand & Logo -->
+                <div id="tab-pane-brand" class="hidden space-y-3 text-xs">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Company Logo File</label>
+                        <input type="file" id="file-logo" accept="image/*" onchange="uploadAssetFile('logo')" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-2 py-1.5 text-slate-400 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-500">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Or Logo Image URL</label>
+                        <input type="text" id="asset-logo-url" placeholder="https://..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                    <div id="logo-preview-box" class="hidden p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center space-x-3">
+                        <img id="logo-preview-img" src="" alt="Logo Preview" class="h-10 w-auto object-contain rounded-lg">
+                        <span class="text-[11px] text-emerald-400 font-semibold">Logo attached to site</span>
+                    </div>
+                </div>
+
+                <!-- TAB 3: Photos & Videos -->
+                <div id="tab-pane-media" class="hidden space-y-3 text-xs">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Upload Product / Room Photos</label>
+                        <input type="file" id="file-photos" accept="image/*" multiple onchange="uploadAssetFile('photos')" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-2 py-1.5 text-slate-400 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-500">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Virtual Tour Video URL (YouTube/Vimeo)</label>
+                        <input type="text" id="asset-video-url" placeholder="https://www.youtube.com/watch?v=..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                    <div id="photo-chips-container" class="flex flex-wrap gap-1.5 pt-1">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- TAB 4: Pricing & Rates Customizer -->
+                <div id="tab-pane-pricing" class="hidden space-y-3 text-xs">
+                    <div class="flex items-center justify-between">
+                        <label class="font-semibold text-slate-300">Custom Rate Cards / Packages</label>
+                        <button onclick="addPricingTier()" class="text-[10px] text-sky-400 hover:underline">+ Add Package</button>
+                    </div>
+                    <div id="pricing-tier-list" class="space-y-2 max-h-52 overflow-y-auto pr-1">
+                        <!-- Tier 1 -->
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5 text-xs">
+                            <div class="flex space-x-2">
+                                <input type="text" placeholder="Tier Name" value="Standard Deluxe" class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-200 font-bold tier-name">
+                                <input type="text" placeholder="Price" value="₹3,999/night" class="w-24 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-emerald-400 font-bold tier-price">
+                            </div>
+                            <input type="text" placeholder="Features (comma separated)" value="King Bed, Free Wi-Fi, Breakfast" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-300 text-[11px] tier-features">
+                        </div>
+                        <!-- Tier 2 -->
+                        <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5 text-xs">
+                            <div class="flex space-x-2">
+                                <input type="text" placeholder="Tier Name" value="Executive Suite" class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-200 font-bold tier-name">
+                                <input type="text" placeholder="Price" value="₹6,499/night" class="w-24 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-emerald-400 font-bold tier-price">
+                            </div>
+                            <input type="text" placeholder="Features (comma separated)" value="Balcony City View, Jacuzzi, Transit" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-300 text-[11px] tier-features">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 5: Brochure PDF -->
+                <div id="tab-pane-brochure" class="hidden space-y-3 text-xs">
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Company Brochure / Menu PDF</label>
+                        <input type="file" id="file-brochure" accept=".pdf" onchange="uploadAssetFile('brochure')" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-2 py-1.5 text-slate-400 file:mr-2 file:py-1 file:px-2.5 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-sky-600 file:text-white hover:file:bg-sky-500">
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-300 mb-1">Or Direct PDF URL</label>
+                        <input type="text" id="asset-brochure-url" placeholder="https://.../brochure.pdf" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-200 focus:outline-none focus:border-sky-500">
+                    </div>
+                    <div id="brochure-status-box" class="hidden p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center space-x-2">
+                        <i data-lucide="file-check" class="w-4 h-4 text-emerald-400"></i>
+                        <span class="text-[11px] text-emerald-400 font-semibold" id="brochure-status-text">Brochure PDF Attached</span>
+                    </div>
+                </div>
+
+                <!-- Primary Generate Action Button -->
+                <button onclick="handleGenerate(event)" id="btn-generate" class="w-full bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-bold py-2.5 rounded-xl shadow-lg shadow-sky-500/20 transition-all flex items-center justify-center space-x-2 text-xs">
+                    <i data-lucide="wand-2" class="w-4 h-4"></i>
+                    <span>Generate Website</span>
+                </button>
+
+                <!-- Voice Command Section (Supports General Ideas + Exact Replacements) -->
+                <div class="pt-3 border-t border-slate-800/80 space-y-2.5">
+                    <div class="flex items-center justify-between">
+                        <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
+                            <i data-lucide="mic" class="w-3.5 h-3.5 text-emerald-400"></i>
+                            <span>Voice / Text Command</span>
+                        </span>
+                        <span id="voice-indicator" class="text-[10px] text-slate-500">Ready</span>
+                    </div>
+
+                    <div class="flex items-center space-x-2">
+                        <button onclick="toggleVoiceRecording()" id="btn-mic" class="w-10 h-10 rounded-xl bg-slate-800 hover:bg-slate-700 text-white flex items-center justify-center flex-shrink-0 transition-all border border-slate-700">
+                            <i data-lucide="mic" class="w-4 h-4 text-emerald-400" id="mic-icon"></i>
+                        </button>
+                        <input type="text" id="voice-transcript-input" placeholder='e.g. change book a room to "book room" or make it gold luxury theme...' class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-slate-200 focus:outline-none focus:border-emerald-500 text-xs">
+                    </div>
+
+                    <button onclick="submitVoiceCommand()" id="btn-voice-submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-2 rounded-xl text-xs transition flex items-center justify-center space-x-1.5 shadow-md shadow-emerald-600/20">
+                        <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                        <span>Apply Revision</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer / Version Note -->
+            <div class="pt-3 border-t border-slate-800 text-[10px] text-slate-500 text-center">
+                Memory Layer: <span class="text-slate-400 font-medium">Vectorize Hindsight v0.10</span>
+            </div>
+        </aside>
+
+        <!-- CENTER PANEL: Interactive Sandbox Live Preview -->
+        <main class="flex-1 flex flex-col bg-slate-950 overflow-hidden">
+            <!-- Sandbox Toolbar -->
+            <div class="h-12 bg-slate-900/60 border-b border-slate-800 px-6 flex items-center justify-between flex-shrink-0">
+                <div class="flex items-center space-x-2">
+                    <span class="text-xs font-semibold text-slate-400">Viewport:</span>
+                    <button onclick="setViewport('desktop')" id="vp-desktop" class="px-3 py-1 rounded-lg text-xs font-semibold bg-sky-600 text-white transition flex items-center space-x-1.5">
+                        <i data-lucide="monitor" class="w-3.5 h-3.5"></i>
+                        <span>Desktop</span>
+                    </button>
+                    <button onclick="setViewport('tablet')" id="vp-tablet" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center space-x-1.5">
+                        <i data-lucide="tablet" class="w-3.5 h-3.5"></i>
+                        <span>Tablet (768px)</span>
+                    </button>
+                    <button onclick="setViewport('mobile')" id="vp-mobile" class="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center space-x-1.5">
+                        <i data-lucide="smartphone" class="w-3.5 h-3.5"></i>
+                        <span>Mobile (375px)</span>
+                    </button>
+                </div>
+
+                <div class="flex items-center space-x-2 text-xs">
+                    <button onclick="deployWebsite()" id="btn-deploy" class="px-3 py-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold transition flex items-center space-x-1.5 shadow-md shadow-emerald-500/20">
+                        <i data-lucide="rocket" class="w-3.5 h-3.5"></i>
+                        <span>Auto-Deploy</span>
+                    </button>
+
+                    <button onclick="openInNewTab()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center space-x-1.5">
+                        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        <span>New Tab</span>
+                    </button>
+
+                    <button onclick="downloadCode()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center space-x-1.5">
+                        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+                        <span>Download HTML</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sandboxed Iframe Container (Enabled popups & scripts) -->
+            <div class="flex-1 bg-slate-900/40 p-4 flex items-center justify-center overflow-auto">
+                <div id="preview-wrapper" class="w-full h-full bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 border border-slate-800">
+                    <iframe id="preview-frame" class="w-full h-full border-none" sandbox="allow-scripts allow-forms allow-same-origin allow-modals allow-popups allow-popups-to-escape-sandbox"></iframe>
+                </div>
+            </div>
+        </main>
+
+        <!-- RIGHT PANEL: Hindsight Reflection & Self-Healing Brain -->
+        <aside class="w-80 lg:w-96 bg-slate-900/90 border-l border-slate-800 flex flex-col p-5 overflow-y-auto flex-shrink-0 space-y-6">
+            <!-- Panel Header -->
+            <div>
+                <div class="flex items-center justify-between gap-3">
+                    <div>
+                        <div class="text-[9px] font-mono tracking-[.22em] text-[#d6b56d] uppercase">Adaptive Web Engineer</div>
+                        <h2 class="text-base font-extrabold tracking-tight text-white mt-1 flex items-center gap-2">
+                            <i data-lucide="brain-circuit" class="w-4 h-4 text-[#f1d58b]"></i>
+                            Hindsight Learning
+                        </h2>
+                    </div>
+                    <span class="status-pill px-2 py-1 rounded-full border text-[9px] font-bold text-[#d6b56d] uppercase tracking-wider">Live</span>
+                </div>
+                <p class="text-[11px] text-slate-500 mt-2">The agent remembers decisions, learns from outcomes, and carries those lessons into the next build.</p>
+            </div>
+            <div class="memory-stage learning-pulse">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="text-[10px] font-bold uppercase tracking-[.16em] text-slate-400">Learning loop</span>
+                    <span id="learning-status" class="text-[9px] font-mono text-[#d6b56d]">READY</span>
+                </div>
+                <div class="flex items-center gap-2 text-[9px] font-semibold">
+                    <div class="stage-node active" id="stage-recall"><span class="stage-dot"></span><span>Recall</span></div>
+                    <div class="stage-line"></div>
+                    <div class="stage-node" id="stage-build"><span class="stage-dot"></span><span>Build</span></div>
+                    <div class="stage-line"></div>
+                    <div class="stage-node" id="stage-reflect"><span class="stage-dot"></span><span>Reflect</span></div>
+                    <div class="stage-line"></div>
+                    <div class="stage-node" id="stage-retain"><span class="stage-dot"></span><span>Retain</span></div>
+                </div>
+                <div class="gold-rule mt-3"></div>
+                <p id="learning-message" class="text-[10px] text-slate-500 mt-2">Waiting for the next interaction.</p>
+            </div>
+
+            <!-- Iteration & Score Summary Card -->
+            <div class="p-4 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+                <div class="flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Healing Iterations:</span>
+                    <span id="stat-iterations" class="font-bold text-white px-2 py-0.5 rounded-md bg-slate-800">1</span>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Overall Critic Score:</span>
+                    <span id="stat-score" class="font-extrabold text-emerald-400 text-sm">100%</span>
+                </div>
+                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                    <div id="stat-progress-bar" class="bg-gradient-to-r from-emerald-500 to-sky-500 h-full w-full transition-all duration-500"></div>
+                </div>
+            </div>
+
+            <!-- 4-Critic Individual Scores -->
+            <div class="space-y-2 text-xs">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Critic Breakdown</span>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                        <div class="flex justify-between text-[11px] text-slate-400">
+                            <span>UI/UX</span>
+                            <span id="score-ui" class="font-bold text-emerald-400">100%</span>
+                        </div>
+                        <div class="text-[10px] text-slate-500 truncate" id="summary-ui">Balanced layout</div>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                        <div class="flex justify-between text-[11px] text-slate-400">
+                            <span>Functionality</span>
+                            <span id="score-func" class="font-bold text-emerald-400">100%</span>
+                        </div>
+                        <div class="text-[10px] text-slate-500 truncate" id="summary-func">WhatsApp verified</div>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                        <div class="flex justify-between text-[11px] text-slate-400">
+                            <span>Mobile/Perf</span>
+                            <span id="score-perf" class="font-bold text-emerald-400">100%</span>
+                        </div>
+                        <div class="text-[10px] text-slate-500 truncate" id="summary-perf">Responsive touch</div>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
+                        <div class="flex justify-between text-[11px] text-slate-400">
+                            <span>Code Quality</span>
+                            <span id="score-code" class="font-bold text-emerald-400">100%</span>
+                        </div>
+                        <div class="text-[10px] text-slate-500 truncate" id="summary-code">Valid HTML5</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hindsight Memory Stream -->
+            <div class="space-y-3 flex-1 flex flex-col">
+                <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center space-x-1.5">
+                        <i data-lucide="database" class="w-3.5 h-3.5 text-sky-400"></i>
+                        <span>Hindsight Memory Bank</span>
+                    </span>
+                    <button onclick="fetchMemories()" class="text-[10px] text-sky-400 hover:underline">Refresh</button>
+                </div>
+
+                <div id="memory-feed" class="space-y-2 overflow-y-auto max-h-72 pr-1 text-xs">
+                    <!-- Loaded dynamically -->
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Auto-Deploy Modal -->
+    <div id="deploy-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-md w-full p-6 shadow-2xl relative space-y-5 animate-in fade-in duration-200">
+            <button onclick="closeDeployModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-1 rounded-lg">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+                    <i data-lucide="rocket" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold text-white leading-tight">Website Deployed Live!</h3>
+                    <p class="text-xs text-slate-400">Accessible worldwide via public URL</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Public Worldwide Link</label>
+                    <div class="flex items-center space-x-2">
+                        <input type="text" id="deploy-public-url" readonly class="flex-1 bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-emerald-400 text-xs font-mono focus:outline-none">
+                        <button onclick="copyDeployUrl()" class="px-3 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-semibold">Copy</button>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">Local Server Route</label>
+                    <input type="text" id="deploy-local-url" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 text-slate-400 text-xs font-mono focus:outline-none">
+                </div>
+            </div>
+
+            <div class="pt-2 flex items-center space-x-3">
+                <a id="deploy-open-link" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl text-center text-xs shadow-lg shadow-emerald-600/30 flex items-center justify-center space-x-2">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                    <span>Open Live Website</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-toast" class="toast-hidden bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl px-4 py-3">
+        <div class="flex items-start gap-3">
+            <div id="toast-icon" class="mt-0.5 text-sky-400">●</div>
+            <div class="min-w-0"><p id="toast-title" class="font-bold text-sm text-white">Ready</p><p id="toast-message" class="text-xs text-slate-400 mt-0.5"></p></div>
+        </div>
+    </div>
+
+    <!-- Application Script -->
+    <script>
+        let currentHtmlCode = "";
+        let isRecording = false;
+        let recognition = null;
+        let uploadedPhotos = [];
+
+        lucide.createIcons();
+
+        // Tab Switcher
+        function switchAssetTab(tab) {
+            const tabs = ['profile', 'brand', 'media', 'pricing', 'brochure'];
+            tabs.forEach(t => {
+                const pane = document.getElementById(`tab-pane-${t}`);
+                const btn = document.getElementById(`tab-btn-${t}`);
+                if (t === tab) {
+                    pane.classList.remove('hidden');
+                    btn.classList.add('border-sky-500', 'text-sky-400');
+                    btn.classList.remove('border-transparent', 'text-slate-400');
+                } else {
+                    pane.classList.add('hidden');
+                    btn.classList.remove('border-sky-500', 'text-sky-400');
+                    btn.classList.add('border-transparent', 'text-slate-400');
+                }
+            });
+        }
+
+        // Upload Asset Handler
+        async function uploadAssetFile(type) {
+            let inputElement;
+            if (type === 'logo') inputElement = document.getElementById('file-logo');
+            else if (type === 'photos') inputElement = document.getElementById('file-photos');
+            else if (type === 'brochure') inputElement = document.getElementById('file-brochure');
+
+            if (!inputElement || !inputElement.files.length) return;
+
+            const files = Array.from(inputElement.files);
+            for (const file of files) {
+                const formData = new FormData();
+                formData.append('file', file);
+
+                try {
+                    const res = await fetch('/api/upload-asset', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const data = await res.json().catch(() => ({}));
+                    if (!res.ok) throw new Error(data.detail || `Upload failed (${res.status})`);
+                    if (data.success) {
+                        if (type === 'logo') {
+                            document.getElementById('asset-logo-url').value = data.url;
+                            document.getElementById('logo-preview-img').src = data.url;
+                            document.getElementById('logo-preview-box').classList.remove('hidden');
+                        } else if (type === 'photos') {
+                            uploadedPhotos.push({ url: data.url, title: file.name.split('.')[0] });
+                            renderPhotoChips();
+                        } else if (type === 'brochure') {
+                            document.getElementById('asset-brochure-url').value = data.url;
+                            document.getElementById('brochure-status-box').classList.remove('hidden');
+                            document.getElementById('brochure-status-text').innerText = `${file.name} Attached`;
+                        }
+                    }
+                } catch (e) {
+                    showToast("Upload failed", e.message, "error");
+                }
+            }
+            fetchMemories();
+        }
+
+        function renderPhotoChips() {
+            const container = document.getElementById('photo-chips-container');
+            container.innerHTML = "";
+            uploadedPhotos.forEach((p, idx) => {
+                const chip = document.createElement('div');
+                chip.className = "px-2 py-1 bg-slate-800 border border-slate-700 rounded-lg text-[10px] text-slate-300 flex items-center space-x-1";
+                chip.innerHTML = `<span>📷 ${p.title}</span><button onclick="removePhoto(${idx})" class="text-slate-500 hover:text-red-400">&times;</button>`;
+                container.appendChild(chip);
+            });
+        }
+
+        function removePhoto(idx) {
+            uploadedPhotos.splice(idx, 1);
+            renderPhotoChips();
+        }
+
+        function addPricingTier() {
+            const list = document.getElementById('pricing-tier-list');
+            const div = document.createElement('div');
+            div.className = "p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5 text-xs";
+            div.innerHTML = `
+                <div class="flex space-x-2">
+                    <input type="text" placeholder="Tier Name" value="Custom Package" class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-200 font-bold tier-name">
+                    <input type="text" placeholder="Price" value="₹1,999" class="w-24 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-emerald-400 font-bold tier-price">
+                </div>
+                <input type="text" placeholder="Features (comma separated)" value="Dedicated Support, Instant Booking" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-300 text-[11px] tier-features">
+            `;
+            list.appendChild(div);
+        }
+
+        function gatherPricingTiers() {
+            const tiers = [];
+            const cards = document.querySelectorAll('#pricing-tier-list > div');
+            cards.forEach(c => {
+                const name = c.querySelector('.tier-name').value.trim();
+                const price = c.querySelector('.tier-price').value.trim();
+                const featuresRaw = c.querySelector('.tier-features').value.trim();
+                const features = featuresRaw.split(',').map(f => f.trim()).filter(Boolean);
+                if (name && price) {
+                    tiers.push({ name, price, period: "", features });
+                }
+            });
+            return tiers;
+        }
+
+        let pricingCustomized = false;
+
+        const categoryPricingPresets = {
+            hotel: [
+                ["Standard Deluxe", "₹3,999/night", "King Bed, Free Wi-Fi, Breakfast"],
+                ["Executive Suite", "₹6,499/night", "City View, Jacuzzi, Airport Transit"],
+                ["Presidential Villa", "₹12,999/night", "Private Pool, Butler Service, Fine Dining"]
+            ],
+            clinic: [
+                ["Consultation", "₹499", "Doctor Consultation, Basic Assessment, Digital Prescription"],
+                ["Complete Care", "₹1,499", "Consultation, Diagnostics, Follow-up Support"],
+                ["Priority Care", "₹2,999", "Priority Appointment, Advanced Diagnostics, Dedicated Support"]
+            ],
+            dental: [
+                ["Dental Checkup", "₹499", "Consultation, Oral Examination, Basic Screening"],
+                ["Smile Care", "₹2,499", "Cleaning, Whitening Consultation, Follow-up"],
+                ["Complete Dental Care", "₹5,999", "Advanced Consultation, Treatment Plan, Follow-up"]
+            ],
+            cafe: [
+                ["Coffee & Pastry", "₹299", "Fresh Brew, Pastry, Dine-in Seating"],
+                ["Tasting Experience", "₹799", "Specialty Coffee Flight, Dessert Pairing, Table Reservation"],
+                ["Cafe Membership", "₹1,499/month", "Member Discounts, Priority Seating, Free Beverage"]
+            ],
+            default: [
+                ["Basic Service", "₹999", "Initial Consultation, Basic Service, Summary Report"],
+                ["Complete Service", "₹2,499", "Full Assessment, Professional Service, Follow-up"],
+                ["Priority Service", "₹4,999", "Priority Support, Advanced Service, Dedicated Assistance"]
+            ]
+        };
+
+        function getCategoryPricingPreset(category) {
+            const c = (category || '').toLowerCase();
+            if (c.includes('hotel') || c.includes('resort') || c.includes('stay') || c.includes('lodge')) return categoryPricingPresets.hotel;
+            if (c.includes('dental')) return categoryPricingPresets.dental;
+            if (c.includes('clinic') || c.includes('hospital') || c.includes('medical') || c.includes('health')) return categoryPricingPresets.clinic;
+            if (c.includes('cafe') || c.includes('coffee') || c.includes('restaurant') || c.includes('bakery')) return categoryPricingPresets.cafe;
+            return categoryPricingPresets.default;
+        }
+
+        function setPricingPreset(category, force = false) {
+            if (pricingCustomized && !force) return;
+            const list = document.getElementById('pricing-tier-list');
+            const preset = getCategoryPricingPreset(category);
+            list.innerHTML = preset.map(([name, price, features]) => `
+                <div class="p-2.5 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5 text-xs">
+                    <div class="flex space-x-2">
+                        <input type="text" placeholder="Tier Name" value="${name}" class="flex-1 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-200 font-bold tier-name">
+                        <input type="text" placeholder="Price" value="${price}" class="w-24 bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-emerald-400 font-bold tier-price">
+                    </div>
+                    <input type="text" placeholder="Features (comma separated)" value="${features}" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-2 py-1 text-slate-300 text-[11px] tier-features">
+                </div>`).join('');
+            pricingCustomized = false;
+        }
+
+        const categoryServicePresets = {
+            hotel: "Deluxe Executive Suites, Fine Dining, Banquet Facilities",
+            clinic: "General Consultation, Diagnostics & Screening, Follow-up Care",
+            dental: "Dental Checkups, Teeth Cleaning & Whitening, Restorative Care",
+            cafe: "Specialty Coffee, Fresh Bakery & Desserts, Table & Event Reservations",
+            default: "Professional Consultation, Complete Service, Priority Support"
+        };
+
+        function getCategoryServicePreset(category) {
+            const c = (category || '').toLowerCase();
+            if (c.includes('hotel') || c.includes('resort') || c.includes('stay') || c.includes('lodge')) return categoryServicePresets.hotel;
+            if (c.includes('dental')) return categoryServicePresets.dental;
+            if (c.includes('clinic') || c.includes('hospital') || c.includes('medical') || c.includes('health')) return categoryServicePresets.clinic;
+            if (c.includes('cafe') || c.includes('coffee') || c.includes('restaurant') || c.includes('bakery')) return categoryServicePresets.cafe;
+            return categoryServicePresets.default;
+        }
+
+        function handleCategoryChange() {
+            const category = document.getElementById('biz-category').value;
+            setPricingPreset(category);
+            // Keep the business context consistent when the category changes.
+            // This prevents stale hotel services from leaking into clinic/cafe/etc. websites.
+            const servicesInput = document.getElementById('biz-services');
+            if (servicesInput) servicesInput.value = getCategoryServicePreset(category);
+        }
+
+        // Presets data
+        const presets = {
+            hotel: {
+                name: "Satya Grand Hotel",
+                category: "Hotel",
+                location: "Hyderabad",
+                phone: "7337537599",
+                whatsapp: "917337537599",
+                services: "Deluxe Executive Suites, Fine Dining, Banquet Facilities"
+            },
+            dental: {
+                name: "Austin Smile Studio",
+                category: "Dental Clinic",
+                location: "Austin, TX",
+                phone: "+1 (512) 555-0198",
+                whatsapp: "15125550198",
+                services: "Cosmetic Dentistry, Teeth Whitening, Emergency Dental"
+            },
+            cafe: {
+                name: "Kaveri Artisan Roasters",
+                category: "Artisan Cafe",
+                location: "Bangalore, IN",
+                phone: "+91 98450 12345",
+                whatsapp: "919845012345",
+                services: "Single Origin Brews, Table Reservations, Event Catering"
+            }
+        };
+
+        document.getElementById('biz-category').addEventListener('input', handleCategoryChange);
+        document.getElementById('biz-category').addEventListener('change', handleCategoryChange);
+        document.getElementById('pricing-tier-list').addEventListener('input', () => { pricingCustomized = true; });
+
+        function applyPreset(key) {
+            const p = presets[key];
+            if (!p) return;
+            document.getElementById("biz-name").value = p.name;
+            document.getElementById("biz-category").value = p.category;
+            document.getElementById("biz-location").value = p.location;
+            document.getElementById("biz-phone").value = p.phone;
+            document.getElementById("biz-whatsapp").value = p.whatsapp;
+            document.getElementById("biz-services").value = p.services;
+            pricingCustomized = false;
+            setPricingPreset(p.category, true);
+        }
+
+        // Viewport Switcher
+        function setViewport(mode) {
+            const wrapper = document.getElementById("preview-wrapper");
+            const btnDesktop = document.getElementById("vp-desktop");
+            const btnTablet = document.getElementById("vp-tablet");
+            const btnMobile = document.getElementById("vp-mobile");
+
+            [btnDesktop, btnTablet, btnMobile].forEach(btn => {
+                btn.className = "px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 transition flex items-center space-x-1.5";
+            });
+
+            if (mode === "desktop") {
+                wrapper.style.width = "100%";
+                wrapper.style.maxWidth = "100%";
+                btnDesktop.className = "px-3 py-1 rounded-lg text-xs font-semibold bg-sky-600 text-white transition flex items-center space-x-1.5";
+            } else if (mode === "tablet") {
+                wrapper.style.width = "768px";
+                wrapper.style.maxWidth = "768px";
+                btnTablet.className = "px-3 py-1 rounded-lg text-xs font-semibold bg-sky-600 text-white transition flex items-center space-x-1.5";
+            } else if (mode === "mobile") {
+                wrapper.style.width = "375px";
+                wrapper.style.maxWidth = "375px";
+                btnMobile.className = "px-3 py-1 rounded-lg text-xs font-semibold bg-sky-600 text-white transition flex items-center space-x-1.5";
+            }
+        }
+
+        // Web Speech API
+        function setupSpeechRecognition() {
+            const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRec) return null;
+            const rec = new SpeechRec();
+            rec.continuous = false;
+            rec.interimResults = false;
+            rec.lang = 'en-US';
+
+            rec.onstart = () => {
+                isRecording = true;
+                document.getElementById("btn-mic").classList.add("bg-red-600", "mic-pulsing");
+                document.getElementById("mic-icon").classList.replace("text-emerald-400", "text-white");
+                document.getElementById("voice-indicator").innerText = "Listening...";
+                document.getElementById("voice-indicator").classList.add("text-red-400");
+            };
+
+            rec.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById("voice-transcript-input").value = transcript;
+                document.getElementById("voice-indicator").innerText = "Voice captured!";
+            };
+
+            rec.onerror = () => stopVoiceRecording();
+            rec.onend = () => stopVoiceRecording();
+            return rec;
+        }
+
+        function toggleVoiceRecording() {
+            if (!recognition) {
+                recognition = setupSpeechRecognition();
+                if (!recognition) {
+                    alert("Speech recognition is not supported in this browser. Please use Chrome or type your instructions.");
+                    return;
+                }
+            }
+            if (isRecording) recognition.stop();
+            else recognition.start();
+        }
+
+        function stopVoiceRecording() {
+            isRecording = false;
+            document.getElementById("btn-mic").classList.remove("bg-red-600", "mic-pulsing");
+            document.getElementById("mic-icon").classList.replace("text-white", "text-emerald-400");
+            document.getElementById("voice-indicator").innerText = "Ready";
+            document.getElementById("voice-indicator").classList.remove("text-red-400");
+        }
+
+        function showToast(title, message, type = "info") {
+            const toast = document.getElementById("app-toast");
+            document.getElementById("toast-title").innerText = title;
+            document.getElementById("toast-message").innerText = message;
+            const icon = document.getElementById("toast-icon");
+            icon.className = type === "error" ? "mt-0.5 text-red-400" : type === "success" ? "mt-0.5 text-emerald-400" : "mt-0.5 text-sky-400";
+            icon.innerText = type === "error" ? "!" : type === "success" ? "✓" : "●";
+            toast.classList.remove("toast-hidden");
+            clearTimeout(window.__toastTimer);
+            window.__toastTimer = setTimeout(() => toast.classList.add("toast-hidden"), 4200);
+        }
+
+        async function refreshSystemStatus() {
+            try {
+                const res = await fetch("/api/health");
+                const data = await res.json();
+                const bank = document.getElementById("status-bank");
+                bank.innerText = data.hindsight_connected ? "cloud connected" : "local memory";
+                const badge = bank.parentElement;
+                badge.classList.toggle("text-emerald-300", data.hindsight_connected);
+                badge.classList.toggle("text-amber-300", !data.hindsight_connected);
+            } catch (_) {
+                document.getElementById("status-bank").innerText = "offline";
+            }
+        }
+
+        // Generate Pipeline API Call
+        async function handleGenerate(e) {
+            setLearningStage("recall", "Checking Hindsight for relevant preferences and previous decisions.", "RECALLING");
+            if (e) e.preventDefault();
+            const btn = document.getElementById("btn-generate");
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i><span>Synthesizing with Assets...</span>`;
+            lucide.createIcons();
+
+            const payload = {
+                name: document.getElementById("biz-name").value,
+                category: document.getElementById("biz-category").value,
+                location: document.getElementById("biz-location").value,
+                phone: document.getElementById("biz-phone").value,
+                whatsapp: document.getElementById("biz-whatsapp").value,
+                services: document.getElementById("biz-services").value,
+                assets: {
+                    logo_url: document.getElementById("asset-logo-url").value,
+                    photos: uploadedPhotos,
+                    video_url: document.getElementById("asset-video-url").value,
+                    brochure_url: document.getElementById("asset-brochure-url").value,
+                    pricing_tiers: gatherPricingTiers()
+                }
+            };
+
+            try {
+                const res = await fetch("/api/generate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok) throw new Error(data.detail || `Server error (${res.status})`);
+                renderResults(data);
+                showToast("Website ready", "Your site was generated and the preview is updated.", "success");
+            } catch (err) {
+                showToast("Generation failed", err.message, "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="wand-2" class="w-4 h-4"></i><span>Generate Website</span>`;
+                lucide.createIcons();
+            }
+        }
+
+        // Voice Command Submit
+        async function submitVoiceCommand() {
+            setLearningStage("recall", "Recalling what you asked for before this revision.", "RECALLING");
+            const transcript = document.getElementById("voice-transcript-input").value;
+            if (!transcript.trim()) {
+                alert("Please record or type a voice instruction first.");
+                return;
+            }
+
+            const btn = document.getElementById("btn-voice-submit");
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-3.5 h-3.5 animate-spin"></i><span>Applying revision...</span>`;
+            lucide.createIcons();
+
+            const payload = {
+                transcript: transcript,
+                current_html: currentHtmlCode,
+                business_data: {
+                    name: document.getElementById("biz-name").value,
+                    category: document.getElementById("biz-category").value,
+                    location: document.getElementById("biz-location").value,
+                    phone: document.getElementById("biz-phone").value,
+                    whatsapp: document.getElementById("biz-whatsapp").value,
+                    services: document.getElementById("biz-services").value,
+                    assets: {
+                        logo_url: document.getElementById("asset-logo-url").value,
+                        photos: uploadedPhotos,
+                        video_url: document.getElementById("asset-video-url").value,
+                        brochure_url: document.getElementById("asset-brochure-url").value,
+                        pricing_tiers: gatherPricingTiers()
+                    }
+                }
+            };
+
+            try {
+                const res = await fetch("/api/voice-command", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok) throw new Error(data.detail || `Server error (${res.status})`);
+                renderResults(data);
+                document.getElementById("voice-transcript-input").value = "";
+                showToast("Revision applied", "Your voice instruction has been reflected in the preview.", "success");
+            } catch (err) {
+                showToast("Revision failed", err.message, "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="send" class="w-3.5 h-3.5"></i><span>Apply Revision</span>`;
+                lucide.createIcons();
+            }
+        }
+
+        // Auto-Deploy
+        async function deployWebsite() {
+            if (!currentHtmlCode) {
+                alert("Please generate a website before deploying.");
+                return;
+            }
+
+            const btn = document.getElementById("btn-deploy");
+            btn.disabled = true;
+            btn.innerHTML = `<i data-lucide="loader-2" class="w-3.5 h-3.5 animate-spin"></i><span>Deploying...</span>`;
+            lucide.createIcons();
+
+            const payload = {
+                html: currentHtmlCode,
+                business_data: {
+                    name: document.getElementById("biz-name").value,
+                    category: document.getElementById("biz-category").value,
+                    location: document.getElementById("biz-location").value
+                }
+            };
+
+            try {
+                const res = await fetch("/api/deploy", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const data = await res.json().catch(() => ({}));
+                if (!res.ok) throw new Error(data.detail || `Server error (${res.status})`);
+                if (data.success) {
+                    document.getElementById("deploy-public-url").value = data.public_url;
+                    document.getElementById("deploy-local-url").value = data.local_url;
+                    document.getElementById("deploy-open-link").href = data.public_url;
+                    document.getElementById("deploy-modal").classList.remove("hidden");
+                    fetchMemories();
+                }
+            } catch (err) {
+                showToast("Deployment failed", err.message, "error");
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = `<i data-lucide="rocket" class="w-3.5 h-3.5"></i><span>Auto-Deploy</span>`;
+                lucide.createIcons();
+            }
+        }
+
+        function closeDeployModal() {
+            document.getElementById("deploy-modal").classList.add("hidden");
+        }
+
+        function copyDeployUrl() {
+            const copyText = document.getElementById("deploy-public-url");
+            copyText.select();
+            navigator.clipboard.writeText(copyText.value);
+            alert("Copied public link: " + copyText.value);
+        }
+
+        function renderResults(data) {
+            currentHtmlCode = data.html;
+
+            const frame = document.getElementById("preview-frame");
+            frame.srcdoc = currentHtmlCode;
+
+            document.getElementById("stat-iterations").innerText = data.iterations_count || 1;
+            const evalData = data.final_evaluation || {};
+            const avg = evalData.average_score || 100;
+            document.getElementById("stat-score").innerText = avg + "%";
+            document.getElementById("stat-progress-bar").style.width = avg + "%";
+
+            if (evalData.critic_results) {
+                evalData.critic_results.forEach(c => {
+                    if (c.critic === "UI/UX Critic") {
+                        document.getElementById("score-ui").innerText = c.score + "%";
+                        document.getElementById("summary-ui").innerText = c.summary;
+                    } else if (c.critic === "Functionality Critic") {
+                        document.getElementById("score-func").innerText = c.score + "%";
+                        document.getElementById("summary-func").innerText = c.summary;
+                    } else if (c.critic === "Performance & Responsiveness Critic") {
+                        document.getElementById("score-perf").innerText = c.score + "%";
+                        document.getElementById("summary-perf").innerText = c.summary;
+                    } else if (c.critic === "Code Quality & Validation Critic") {
+                        document.getElementById("score-code").innerText = c.score + "%";
+                        document.getElementById("summary-code").innerText = c.summary;
+                    }
+                });
+            }
+
+            fetchMemories();
+            setLearningFromResult(data);
+        }
+
+        function setLearningStage(stage, message, status = "LEARNING") {
+            const stages = ["recall", "build", "reflect", "retain"];
+            stages.forEach(name => {
+                const el = document.getElementById(`stage-${name}`);
+                if (!el) return;
+                el.classList.toggle("active", name === stage);
+                el.classList.toggle("done", stages.indexOf(name) < stages.indexOf(stage));
+            });
+            const statusEl = document.getElementById("learning-status");
+            const messageEl = document.getElementById("learning-message");
+            if (statusEl) statusEl.innerText = status;
+            if (messageEl) messageEl.innerText = message;
+        }
+
+        function setLearningFromResult(data) {
+            if (data.recalled_memories?.length || data.recalled_user_preferences?.length) {
+                setLearningStage("build", "Recalled prior decisions and user preferences for this build.", "RECALLED");
+            }
+            setTimeout(() => setLearningStage("reflect", "Critics are evaluating what worked and what should change.", "REFLECTING"), 650);
+            setTimeout(() => setLearningStage("retain", "The outcome is being retained as experience for future projects.", "LEARNED"), 1400);
+        }
+
+        async function fetchMemories() {
+            try {
+                const res = await fetch("/api/memories");
+                const data = await res.json();
+                const feed = document.getElementById("memory-feed");
+                feed.innerHTML = "";
+
+                if (!data.memories || data.memories.length === 0) {
+                    feed.innerHTML = `<div class="text-slate-500 italic p-3 text-center">No memories retained yet.</div>`;
+                    return;
+                }
+
+                data.memories.slice().reverse().forEach(m => {
+                    const div = document.createElement("div");
+                    div.className = "memory-card p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1.5";
+                    
+                    let badgeColor = "bg-sky-500/20 text-sky-400 border-sky-500/30";
+                    if (m.type === "experience") badgeColor = "bg-emerald-500/20 text-emerald-400 border-emerald-500/30";
+                    if (m.type === "directive") badgeColor = "bg-amber-500/20 text-amber-400 border-amber-500/30";
+
+                    div.innerHTML = `
+                        <div class="flex items-center justify-between text-[10px]">
+                            <span class="px-2 py-0.5 rounded-full border ${badgeColor} font-bold uppercase tracking-wider">${m.type}</span>
+                            <span class="text-slate-500">${m.source || 'hindsight'}</span>
+                        </div>
+                        <p class="text-slate-300 text-[11px] leading-relaxed">${m.content}</p>
+                    `;
+                    feed.appendChild(div);
+                });
+            } catch (e) {
+                console.error("Failed to fetch memories:", e);
+            }
+        }
+
+        function openInNewTab() {
+            if (!currentHtmlCode) return;
+            const newWindow = window.open();
+            newWindow.document.write(currentHtmlCode);
+            newWindow.document.close();
+        }
+
+        function downloadCode() {
+            if (!currentHtmlCode) return;
+            const blob = new Blob([currentHtmlCode], { type: "text/html" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "index.html";
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            fetchMemories();
+            refreshSystemStatus();
+            showToast("Ready to build", "Enter your business details, then click Generate Website.");
+        });
+    </script>
+</body>
+</html>

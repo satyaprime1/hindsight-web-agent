@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "obs-1",
+    "type": "observation",
+    "content": "Local business websites convert 3x higher when they feature a floating WhatsApp CTA and a prominent click-to-call button.",
+    "tags": [
+      "pattern",
+      "conversion",
+      "local_biz"
+    ],
+    "created_at": "2026-09-27T13:14:11.882423"
+  },
+  {
+    "id": "obs-2",
+    "type": "directive",
+    "content": "CRITICAL RULE: WhatsApp links must strictly follow https://wa.me/<country_code><number>. E.g., 'https://wa.me/15125550198'. Never use tel: or raw unformatted strings for WhatsApp.",
+    "tags": [
+      "mistake_guard",
+      "functionality",
+      "whatsapp"
+    ],
+    "created_at": "2026-09-27T13:14:11.882438"
+  },
+  {
+    "id": "obs-3",
+    "type": "observation",
+    "content": "Hero banners must use high contrast text (e.g., white text on slate-900 background with minimum 4.5:1 ratio) to ensure readability.",
+    "tags": [
+      "ui_ux",
+      "accessibility"
+    ],
+    "created_at": "2026-09-27T13:14:11.882440"
+  },
+  {
+    "id": "obs-4",
+    "type": "observation",
+    "content": "Appointment booking forms must include Name, Phone/Email, Preferred Date/Time, and a simulated confirmation modal to prevent user abandonment.",
+    "tags": [
+      "functionality",
+      "forms"
+    ],
+    "created_at": "2026-09-27T13:14:11.882441"
+  },
+  {
+    "id": "mem-5",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.935521",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-6",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.935708",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-7",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.936078",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-8",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.936357",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-9",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.936609",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-10",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d6cfd5ed",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T13:14:11.936838",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-11",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2.",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516729"
+    },
+    "created_at": "2026-09-27T19:15:29.098458",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-12",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:15:29.104769",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-13",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a professional, polished visual language.\n- User prefers a black, white, and gold visual palette.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a premium, luxurious, high-end visual direction.\n- User prefers subtle, purposeful animation rather than excessive motion.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516729",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:15:29.105642",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-14",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.563183",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-15",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.565007",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-16",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.565769",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-17",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.567099",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-18",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.568372",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-19",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-9fd41fef",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:00.569166",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-20",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.900149",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-21",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.901356",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-22",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.902809",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-23",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.903879",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-24",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.904744",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-25",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-8039fe54",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:01.905417",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-26",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.683864",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-27",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.685286",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-28",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.686066",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-29",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.686976",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-30",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.687930",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-31",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-08337b91",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:02.688666",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-32",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516763",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:03.611029",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-33",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516763",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:03.611906",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-34",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516763",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:03.616339",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-35",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516763",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:03.617498",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-36",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516763",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:16:03.618462",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-37",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516763"
+    },
+    "created_at": "2026-09-27T19:16:03.619329",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-38",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:16:03.627136",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-39",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516763",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:16:03.631322",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-40",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.585769",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-41",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.587141",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-42",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.588063",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-43",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.588890",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-44",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.589761",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-45",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-d4c43244",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:37.590745",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-46",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516859",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:39.873188",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-47",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516859",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:39.874772",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-48",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516859",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:39.876283",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-49",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516859",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:39.877603",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-50",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516859",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:39.878478",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-51",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516859"
+    },
+    "created_at": "2026-09-27T19:17:39.881934",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-52",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:39.891129",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-53",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516859",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:39.892185",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-54",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516861",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:41.478072",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-55",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516861",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:41.480190",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-56",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516861",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:41.481492",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-57",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516861",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:41.482754",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-58",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516861",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:41.483973",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-59",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516861"
+    },
+    "created_at": "2026-09-27T19:17:41.485191",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-60",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:41.497753",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-61",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516861",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:41.499422",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-62",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2.",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516862"
+    },
+    "created_at": "2026-09-27T19:17:42.980050",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-63",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:42.987189",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-64",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a professional, polished visual language.\n- Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a professional, polished visual language.\n- User prefers a black, white, and gold visual palette.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a premium, luxurious, high-end visual direction.\n- User prefers subtle, purposeful animation rather than excessive motion.. Critic issues: none.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516862",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:42.988698",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-65",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.640728",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-66",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.642177",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-67",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.643377",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-68",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.645506",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-69",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.647213",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-70",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-cf7b9891",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:47.648728",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-71",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516872",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:52.814735",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-72",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516872",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:52.816926",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-73",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516872",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:52.818425",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-74",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516872",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:52.819921",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-75",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516872",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:52.821242",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-76",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516872"
+    },
+    "created_at": "2026-09-27T19:17:52.822662",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-77",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:52.837475",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-78",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516872",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:52.839192",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-79",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2.",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516877"
+    },
+    "created_at": "2026-09-27T19:17:57.115236",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-80",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:57.122110",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-81",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a professional, polished visual language.\n- Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a professional, polished visual language.\n- User prefers a black, white, and gold visual palette.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a premium, luxurious, high-end visual direction.\n- User prefers subtle, purposeful animation rather than excessive motion.. Critic issues: none.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516877",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:57.124692",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-82",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.530660",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-83",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.532873",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-84",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.534874",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-85",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.537080",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-86",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.538611",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-87",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516878"
+    },
+    "created_at": "2026-09-27T19:17:58.542776",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-88",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:58.554436",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-89",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516878",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:58.561979",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-90",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.927675",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-91",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.929494",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-92",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.931496",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-93",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.933148",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-94",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790516878",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:58.934679",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-95",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790516878"
+    },
+    "created_at": "2026-09-27T19:17:58.936248",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-96",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:58.949829",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-97",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790516878",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:17:58.951457",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-98",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.688597",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-99",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.692581",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-100",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.695149",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-101",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.697482",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-102",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.699427",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-103",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-47207bb5",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:17:59.701335",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-104",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.108306",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-105",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.111150",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-106",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.113488",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-107",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.115265",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-108",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.118156",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-109",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-22641318",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:20.122737",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-110",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517261",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:21.114627",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-111",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517261",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:21.117347",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-112",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517261",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:21.120280",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-113",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517261",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:21.124137",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-114",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517261",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:21.130455",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-115",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790517261"
+    },
+    "created_at": "2026-09-27T19:24:21.132433",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-116",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:21.148208",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-117",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790517261",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:21.150347",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-118",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.067868",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-119",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.069830",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-120",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.071667",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-121",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.073386",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-122",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.075087",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-123",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-f557d7c2",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.078288",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-124",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517263",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.909622",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-125",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517263",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.912489",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-126",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517263",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.916512",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-127",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517263",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.918697",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-128",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517263",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:23.920767",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-129",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790517263"
+    },
+    "created_at": "2026-09-27T19:24:23.922880",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-130",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:23.940266",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-131",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790517263",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:23.943088",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-132",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2.",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790517270"
+    },
+    "created_at": "2026-09-27T19:24:30.529323",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-133",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:30.539399",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-134",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790517270",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:30.542455",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-135",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.981159",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-136",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.983723",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-137",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.985730",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-138",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.988404",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-139",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.991140",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-140",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "demo-934e1f97",
+      "business": "Hindsight Demo",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:35.993542",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-141",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517277",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:37.509288",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-142",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517277",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:37.512467",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-143",
+    "type": "user_preference",
+    "content": "User prefers a premium, luxurious, high-end visual direction.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517277",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:37.517554",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-144",
+    "type": "user_preference",
+    "content": "User prefers subtle, purposeful animation rather than excessive motion.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517277",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:37.523536",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-145",
+    "type": "user_preference",
+    "content": "User prefers a professional, polished visual language.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790517277",
+      "business": "Aurelia AI",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T19:24:37.526249",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-146",
+    "type": "world",
+    "content": "Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.''",
+    "tags": [
+      "business_intake",
+      "ai startup"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790517277"
+    },
+    "created_at": "2026-09-27T19:24:37.529169",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-147",
+    "type": "experience",
+    "content": "Successfully approved website layout for Aurelia AI with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Schedule Appointment.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:37.547907",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-148",
+    "type": "experience",
+    "content": "Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- Website generation outcome for Aurelia AI: score 100.0%. User-facing preferences active: - Business profile: Aurelia AI in Hyderabad. Category: AI Startup. WhatsApp: . Assets: 0 photos, Logo: False, Pricing Tiers: 0. Instructions: 'Build a premium AI startup website for Aurelia AI. Create a polished landing page with hero, capabilities, proof, and CTA. Apply the user's previously learned design preferences without asking them again.\n\nThis is a fresh project. Apply the user's long-term preferences recalled from Hindsight below. Do not mention memory in the website copy.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.\n- User prefers a professional, polished visual language.'\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.. Critic issues: none.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User prefers a clean, minimal interface with restrained visual clutter.'. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790517277",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T19:24:37.550519",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-149",
+    "type": "experience",
+    "content": "User voice instruction: 'I prefer black, white and gold with minimal animations.'. Requested on business Satya Grand Hotel.",
+    "tags": [
+      "voice_command",
+      "user_preference",
+      "iteration"
+    ],
+    "metadata": {
+      "type": "experience",
+      "learning": "voice_revision"
+    },
+    "created_at": "2026-09-27T20:17:09.288609",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-150",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "voice-b92fa183",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.291561",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-151",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "voice-b92fa183",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.293894",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-152",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer black, white and gold with minimal animations.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "voice-b92fa183",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.297022",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-153",
+    "type": "user_preference",
+    "content": "User prefers a black, white, and gold visual palette.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790520429",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.300423",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-154",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790520429",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.302925",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-155",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer black, white and gold with minimal animations.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790520429",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:09.305502",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-156",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2. Instructions: 'I prefer black, white and gold with minimal animations.'",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790520429"
+    },
+    "created_at": "2026-09-27T20:17:09.308772",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-157",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:17:09.321345",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-158",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User voice instruction: 'I prefer black, white and gold with minimal animations.'. Requested on business Satya Grand Hotel.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790520429",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:17:09.324078",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-159",
+    "type": "experience",
+    "content": "User voice instruction: 'I prefer black  and gold with minimal animations.'. Requested on business Satya Grand Hotel.",
+    "tags": [
+      "voice_command",
+      "user_preference",
+      "iteration"
+    ],
+    "metadata": {
+      "type": "experience",
+      "learning": "voice_revision"
+    },
+    "created_at": "2026-09-27T20:17:29.772406",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-160",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "voice-26745e66",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:29.775247",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-161",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer black and gold with minimal animations.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "voice-26745e66",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:29.777794",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-162",
+    "type": "user_preference",
+    "content": "User prefers a clean, minimal interface with restrained visual clutter.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790520449",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:29.780721",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-163",
+    "type": "user_preference",
+    "content": "User instruction/preference: I prefer black and gold with minimal animations.",
+    "tags": [
+      "user_preference",
+      "design_preference",
+      "long_term_memory"
+    ],
+    "metadata": {
+      "type": "user_preference",
+      "workflow_id": "wf-1790520449",
+      "business": "Satya Grand Hotel",
+      "learning": "explicit_user_instruction"
+    },
+    "created_at": "2026-09-27T20:17:29.783027",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-164",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2. Instructions: 'I prefer black  and gold with minimal animations.'",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790520449"
+    },
+    "created_at": "2026-09-27T20:17:29.785761",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-165",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:17:29.797557",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-166",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User voice instruction: 'I prefer black, white and gold with minimal animations.'. Requested on business Satya Grand Hotel.\n- User voice instruction: 'I prefer black  and gold with minimal animations.'. Requested on business Satya Grand Hotel.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790520449",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:17:29.800143",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-167",
+    "type": "world",
+    "content": "Business profile: Satya Grand Hotel in Hyderabad. Category: Hotel. WhatsApp: 917337537599. Assets: 0 photos, Logo: False, Pricing Tiers: 2.",
+    "tags": [
+      "business_intake",
+      "hotel"
+    ],
+    "metadata": {
+      "type": "world",
+      "workflow_id": "wf-1790521204"
+    },
+    "created_at": "2026-09-27T20:30:04.063266",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-168",
+    "type": "experience",
+    "content": "Successfully approved website layout for Satya Grand Hotel with score 100.0%. Theme: Memory-Learned Noir & Gold. Primary CTA: Book a Room.",
+    "tags": [
+      "success_pattern",
+      "approved"
+    ],
+    "metadata": {
+      "type": "experience",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:30:04.076143",
+    "source": "hindsight_local"
+  },
+  {
+    "id": "mem-169",
+    "type": "experience",
+    "content": "Website generation outcome for Satya Grand Hotel: score 100.0%. User-facing preferences active: - User instruction/preference: I prefer a black, white and gold visual system. Keep it minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.\n- User instruction/preference: I prefer a black, white and gold visual system. Keep the interface minimal, luxurious and professional. Use subtle hover interactions and avoid excessive animation or gradients.. Critic issues: none.",
+    "tags": [
+      "generation_outcome",
+      "accepted_pattern"
+    ],
+    "metadata": {
+      "type": "experience",
+      "workflow_id": "wf-1790521204",
+      "score": "100.0"
+    },
+    "created_at": "2026-09-27T20:30:04.079231",
+    "source": "hindsight_local"
+  }
+]
